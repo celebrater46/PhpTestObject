@@ -1,7 +1,6 @@
 <?php
 
 require_once "Novel.php";
-//require_once "Episode.php";
 
 $Shiroganeki = new Novel(1, "白金記", "shiroganeki");
 $Gokuraku = new Novel(2, "極楽戦争", "gokuraku");
@@ -10,12 +9,6 @@ $Shiroganeki_eps = $Shiroganeki->get_episodes();
 
 $Test_Ep = $Shiroganeki->test_create_episode();
 $Ep = $Shiroganeki->test_create_episode;
-//$Chap_num = $Shiroganeki->test_create_episode();
-
-//echo $SampleNovel->title . PHP_EOL;
-//echo $SampleNovel->path . PHP_EOL;
-//
-//var_dump($SampleNovel->caption);
 
 ?>
 

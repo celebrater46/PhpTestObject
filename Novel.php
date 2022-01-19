@@ -33,6 +33,5 @@ class Novel
 
     function test_create_episode(){
         $this->test_create_episode = new Episode("第一話「訪問者」", $this->path, 1, 1);
-//        return $this->test_create_episode->chap_num;
     }
 }
