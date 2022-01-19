@@ -1,9 +1,16 @@
 <?php
 
 require_once "Novel.php";
+//require_once "Episode.php";
 
-$Shiroganeki = new Novel("白金記", "shiroganeki");
-$Gokuraku = new Novel("極楽戦争", "gokuraku");
+$Shiroganeki = new Novel(1, "白金記", "shiroganeki");
+$Gokuraku = new Novel(2, "極楽戦争", "gokuraku");
+
+$Shiroganeki_eps = $Shiroganeki->get_episodes();
+
+$Test_Ep = $Shiroganeki->test_create_episode();
+$Ep = $Shiroganeki->test_create_episode;
+//$Chap_num = $Shiroganeki->test_create_episode();
 
 //echo $SampleNovel->title . PHP_EOL;
 //echo $SampleNovel->path . PHP_EOL;
@@ -27,12 +34,22 @@ $Gokuraku = new Novel("極楽戦争", "gokuraku");
         <p><?php echo $line; ?></p>
     <?php endforeach; ?>
 
+    <p><?php var_dump($Shiroganeki_eps); ?></p>
+    <p><?php var_dump($Shiroganeki->test_show_list); ?></p>
+    <p><?php var_dump($Ep); ?></p>
+
+    <?php foreach ($Shiroganeki_eps as $ep) : ?>
+        <p><?php echo $ep->title . ", " . $ep->link; ?></p>
+    <?php endforeach; ?>
+
+
 
     <h2><?php echo $Gokuraku->title; ?></h2>
     <h3><?php echo $Gokuraku->path; ?></h3>
     <?php foreach ($Gokuraku->caption as $line) : ?>
         <p><?php echo $line; ?></p>
     <?php endforeach; ?>
+
 
 </body>
 </html>
